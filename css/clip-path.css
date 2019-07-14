@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #eee;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content {
+  position: relative;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.content__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  -webkit-clip-path: circle(100% at 50% 50%);
+          clip-path: circle(100% at 50% 50%);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.content__inner {
+  position: relative;
+  color: #fff;
+  padding: 1rem;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.content__title {
+  margin: 0;
+}
+
+.content:hover .content__background {
+  -webkit-clip-path: circle(0 at 50% 50%);
+          clip-path: circle(0 at 50% 50%);
+}
+
+.content:hover .content__inner {
+  color: #333;
+}
+/*# sourceMappingURL=clip-path.css.map */
